@@ -1,0 +1,67 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 80%;
+}
+
+.message--user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.message--assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.message-label {
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 4px;
+}
+
+.message-bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.message--user .message-bubble {
+  background: #1e4ed8;
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}
+
+.message--assistant .message-bubble {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #2a2a2a;
+  border-bottom-left-radius: 3px;
+}
+
+.message--error .message-bubble {
+  background: #2d1111;
+  border-color: #5a2020;
+  color: #f87171;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #888;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.9s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
